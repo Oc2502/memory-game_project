@@ -163,6 +163,7 @@ function evenet(obj) {
     check2CardSArray.push(obj)
     const card1 = document.getElementById(`${obj.id}`)
     card1.classList.add('flip')
+    card1.classList.add('event')
     if(check2CardSArray.length === 2){
         document.querySelector('.canvas').classList.add('event') //stop any click on screen
         checkIfSameCard(check2CardSArray)
@@ -186,6 +187,7 @@ function checkIfSameCard(arrayOf2) {
             counter.textContent = `${numberOfTry}`
             arrayOf2.forEach((card) => {
                 document.getElementById(`${card.id}`).classList.remove('flip') // add hidden class 
+                document.getElementById(`${card.id}`).classList.remove('event')
             })
              
         }
