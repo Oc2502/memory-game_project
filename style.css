@@ -1,0 +1,160 @@
+
+
+.btn {
+    padding: 5px 20px;
+    background-color: teal;
+    color: white;
+    border-radius: 5px;
+}
+
+#landing-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+    background-image: url(./image/background-1.jpg);
+    background-size: cover;    
+}
+
+#landing-page p{
+    font-size: 5vw;
+    font-weight: 800;
+    color: white;
+    text-shadow: 5px 5px 5px black;
+}
+
+.display {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    background: white;
+}
+
+/* when outer have class open it will show and have events*/
+.display.open {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* game board style*/
+
+.game-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.canvas {
+    /* height: 100vh; */
+    background-image: url(./image/background.jpg);
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+#win-display {
+    background-image: url("./image/simpsons-win.png");
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* flip card style: */
+
+.flip-card {
+    background-color: transparent;
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+}
+  
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+
+.flip {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    background-image: url(./image/backgroud-card.jpeg);
+    background-size: cover;
+    color: black;
+    border-radius: 5px;
+}
+
+.flip-card-back {
+    background: white;
+    transform: rotateY(180deg);
+    border-radius: 5px;
+
+}
+
+.event {
+    pointer-events: none;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+@media (max-width:500px) {
+    #win-display {
+        background-image: url("./image/background-won-phone.jpg");
+        background-size: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .game-title {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .canvas {
+        height: 90vh;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .flip-card {
+        background-color: transparent;
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+    }
+}
