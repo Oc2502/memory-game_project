@@ -67,8 +67,18 @@
     width: 100vw;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+}
+
+.win {
+    
+    width: 300px;
+    color: black;
+    text-align: center;
+    margin:30px 20px; 
+    font-size: 2rem;
+
 }
 
 /* flip card style: */
