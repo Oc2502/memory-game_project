@@ -6,8 +6,7 @@ const newGame = document.querySelector('.new-game')
 let counter = document.querySelector('.counter'); // number of wrong answers
 let cardItem = {};
 let check2CardSArray =[];
-let numberOfTry = 0
-console.log(typeof numberOfTry)//////////////////////////////////////////////
+let numberOfTry = 0;
 let wins = 0; // number of rigth answers
 let gameArrayOfCards = [];
 
@@ -123,7 +122,6 @@ function startGame() {
 function randomCards(numberOfCards) {
     gameArrayOfCards = cardsArray.slice(0, numberOfCards);
     gameArrayOfCards = gameArrayOfCards.sort(() => Math.random() - 0.5);
-    console.log(gameArrayOfCards);
     createCards(gameArrayOfCards); // start array of obj
     return gameArrayOfCards;
 }
@@ -200,11 +198,8 @@ function checkIfSameCard(arrayOf2) {
 }
 
 function ifWon(wins) {
-    console.log(cardsArray)
-    console.log('heloooooooooooooo')
-    console.log(wins)
 
-    if( wins === (6) ) { //////////////////////////////////////////////////// fix the array
+    if( wins === (6) ) { /////////// need to fix the array to be dinamic
         const winDisplay = document.getElementById('win-display');
         winDisplay.classList.add('open');
         stop();// stop time
