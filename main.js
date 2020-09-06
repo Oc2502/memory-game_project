@@ -6,7 +6,7 @@ const newGame = document.querySelector('.new-game')
 let counter = document.querySelector('.counter'); // number of wrong answers
 let cardItem = {};
 let check2CardSArray =[];
-let numberOfTry = 0;
+let numberOfTry;
 let wins = 0; // number of rigth answers
 let gameArrayOfCards = [];
 
@@ -112,7 +112,8 @@ let cardsArray = [
 
 
 function startGame() {
-    
+    numberOfTry = 0;
+    wins = 0;
     game.classList.add('open')
     
     startWatch()// start clock function
@@ -216,7 +217,7 @@ function restartGame() {
     stop(); 
     document.getElementById('win-display').classList.remove('open');
     canvas.innerHTML = '';
-    
+    counter.textContent = `0`;
     startGame();
 }
 
